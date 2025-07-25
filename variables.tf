@@ -31,7 +31,7 @@ variable "container_definition" {
       port = number
     }),
     environment_variables = map(string)
-    command = list(string)
+    command               = list(string)
   })
 }
 
@@ -43,4 +43,10 @@ variable "subnet" {
 variable "environment" {
   type        = string
   description = "The target environment"
+}
+
+variable "application_name" {
+  type = string
+  default = "General"
+  description = "The application name that will be deployed over this resource"
 }

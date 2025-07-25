@@ -39,7 +39,7 @@ resource "oci_container_instances_container_instance" "container_instance" {
       port              = var.container_definition.health_checks.port
     }
 
-    
+
 
     command = var.container_definition.command
   }
@@ -59,6 +59,7 @@ resource "oci_container_instances_container_instance" "container_instance" {
 
   defined_tags = {
     "Oracle-Tags.CreatedBy"   = "default/terraform",
-    "Oracle-Tags.Environment" = var.environment
+    "Oracle-Tags.Environment" = var.environment,
+    "Oracle-Tags.Application" = var.application_name
   }
 }
